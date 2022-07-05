@@ -29,7 +29,7 @@ Client side and Server side stacks:
     - labels
     - input
     - buttons
-    - in general styling
+    - general styling
 - GET and update DOM
 - POST user request changes
 - DELETE
