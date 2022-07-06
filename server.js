@@ -1,5 +1,6 @@
 const express = require('express')
 const bodyParser = require('body-parser')
+const MongoClient = require('mongodb').MongoClient
 const app = express()
 
 app.use(bodyParser.urlencoded({
@@ -14,3 +15,9 @@ app.get('/', (req, res) => {
 app.post('/equipment', (req, res) => {
     console.log(req.body)
 })
+
+MongoClient.connect('mongodb+srv://bear:Mdsoccer1@cluster0.77wby1r.mongodb.net/?retryWrites=true&w=majority', { useUnifiedTopology: true })
+    .then(client => {
+        console.log("connected to database")
+    })
+    .catch(error => console.log(error))
