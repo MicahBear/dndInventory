@@ -19,11 +19,13 @@
           <button id="add" type="submit">Add</button>
         </form>
       </section>
-
       <section class="column" id="right-column">
         <span>Equipment List</span>
-        <button id="delete-equipment">Remove Equipment</button>
-        <ul id="equipment-list"></ul>
+        <ul id="equipment-list">
+            <% for(let i =0; i<equipment.length;i++){ %> 
+          <li class="equipment"><span><%=equipment[i].equipment%></span></li>
+          <% } %> 
+        </ul>
       </section>
     </section>
 
