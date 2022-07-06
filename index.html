@@ -5,10 +5,26 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <!-- <link rel="stylesheet" href="style/main.css" /> -->
   </head>
   <body>
-    <h3></h3>
-    <div id="test"></div>
-    <script src="main.js"></script>
+    <header>
+      <h1>DnD Bag of Inventory</h1>
+    </header>
+    <section class="section-container" id="left-column">
+      <section class="column">
+        <form action="/equipment" method="POST">
+          <input type="text" id="equipData" name="equipment" />
+          <button id="search" type="button">Search</button>
+          <button id="add" type="submit">Add</button>
+        </form>
+      </section>
+      <section class="column" id="right-column">
+        <span>Equipment List</span>
+        <ul id="equipment-list"></ul>
+      </section>
+    </section>
+
+    <!-- <script src="main.js"></script> -->
   </body>
 </html>

@@ -12,26 +12,36 @@
 //     document.querySelector("#personOccupation").textContent = data.currentOccupation
 // }
 
-const getEquipment = async () => {
+document.querySelector('#search').addEventListener('click', getEquipment)
+
+async function getEquipment() {
+    const index = document.querySelector('#equipData').value
+
     try {
 
-        const response = await fetch(' https://www.dnd5eapi.co/api/equipment'); // get users list
+        const response = await fetch(`https://www.dnd5eapi.co/api/equipment/${index}`);
         if (!response.ok) {
             throw new Error(response.status)
         }
         const equipment = await response.json(); // parse JSON
-        document.querySelector('#test').textContent = equipment.results[0].name
-        console.log(equipment.results[0].name)
+
+        // document.querySelector('#test').textContent = equipment.results[0].name
+        console.log(equipment)
+        const li = document.createElement('li')
+        li.textContent = equipment.name
+        document.querySelector('ul').appendChild(li)
         return equipment
+
+
 
     }
     catch (error) {
         console.log(error)
     }
 
-
-
 };
 
-const promise = getEquipment()
-promise.then(equipment => console.log(equipment))
+
+
+// const promise = getEquipment()
+// promise.then(equipment => console.log(equipment.weight))
