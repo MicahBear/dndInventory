@@ -9,7 +9,7 @@ const app = express()
 // app.post('/equipment', (req, res) => {
 //     console.log(req.body)
 // })
-const connectionString = 'mongodb+srv://bear:Mdsoccer1@cluster0.77wby1r.mongodb.net/?retryWrites=true&w=majority'
+const connectionString = 'mongodb+srv://bear:*1@cluster0.77wby1r.mongodb.net/?retryWrites=true&w=majority'
 MongoClient.connect(connectionString, { useUnifiedTopology: true })
     .then(client => {
         console.log("connected to database")

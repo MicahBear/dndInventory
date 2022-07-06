@@ -1,3 +1,5 @@
+app.use(express.static('public'))
+
 // document.querySelector('#clickMe').addEventListener('click', makeReq)
 
 // async function makeReq() {
